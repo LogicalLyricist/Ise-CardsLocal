@@ -3,16 +3,15 @@ html
     head 
         link(href='style.css' rel='stylesheet')
         title Ise-Cards
-        ul 
-            li 
-                a(href="http://localhost:3000/") Main
-            li
-                a(href="http://localhost:3000/game") Play
-            li
-                a(href="http://localhost:3000/store") Store 
-            li(id='empty_li_for_spacing')
-
-            li 
-
+        div(id='menu')
+            div(class='menuItem')
+                a(href="/") Main
+            div(class='menuItem')
+                a(href="/game") Play
+            div(class='menuItem')
+                a(href="/store") Store 
+            div(id='spacingForMenu' class='menuItem')
+            div(class='menuItem')
+                a(href='about:blank') Log in / Sign up
     body 
     block content
