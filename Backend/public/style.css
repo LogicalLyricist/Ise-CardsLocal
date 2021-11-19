@@ -14,7 +14,7 @@
     padding-left: 1%;
     padding-right: 1%;
     width: fit-content;
-    border: 2px solid #000;
+    border: 1px solid #000;
     border-radius: 10px;
     cursor: pointer;
     text-align: center;
@@ -29,6 +29,7 @@
 a {
     text-decoration: none;
     user-select: none;
+    color: #000;
 }
 
 #storeContainer {
