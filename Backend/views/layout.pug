@@ -4,14 +4,10 @@ html
         link(href='style.css' rel='stylesheet')
         title Ise-Cards
         div(id='menu')
-            div(class='menuItem')
-                a(href="/") Main
-            div(class='menuItem')
-                a(href="/game") Play
-            div(class='menuItem')
-                a(href="/store") Store 
+            a(href="/" class='menuItem') Main
+            a(href="/game" class='menuItem') Play
+            a(href="/store" class='menuItem') Store 
             div(id='spacingForMenu' class='menuItem')
-            div(class='menuItem')
-                a(href='about:blank') Log in / Sign up
+            a(href='about:blank' class='menuItem') Log in / Sign up
     body 
     block content
