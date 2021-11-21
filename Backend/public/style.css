@@ -21,6 +21,10 @@
     text-align: center;
 }
 
+.menuItem:hover {
+    background-color: #ddd;
+}
+
 #spacingForMenu {
     background-color: #aaa;
     flex: 1;
