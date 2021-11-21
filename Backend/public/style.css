@@ -19,7 +19,6 @@
     border-radius: 10px;
     cursor: pointer;
     text-align: center;
-    vertical-align: middle;
 }
 
 #spacingForMenu {
@@ -50,11 +49,20 @@ a {
 	flex: 1;
     border: 2px solid #000;
     margin: 1%;
+    max-height: 110px;
     text-align: center;
-    vertical-align: middle;
 }
 
 .storeButton:hover {
     flex: 1.5;
     background-color: #ffd;
+    max-height: fit-content;
+}
+
+.storeButtonDescription {
+    display: none;
+}
+
+.storeButton:hover .storeButtonDescription {
+    display: block;
 }
