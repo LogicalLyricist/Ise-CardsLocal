@@ -1,0 +1,29 @@
+.user{
+
+}
+
+.pass{
+
+}
+
+.submit{
+
+}
+
+.menu{
+    display: flex;
+    flex-wrap: nowrap;
+    list-style-type: none;
+
+    width: 100px;
+}
+
+.menu > li {
+        text-align: center;
+    border: orange;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 20px;
+    margin: 10px;
+    padding: 20px;
+}

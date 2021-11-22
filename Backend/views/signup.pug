@@ -3,11 +3,11 @@ html
     head 
     body 
         form(method='post' action='/')
-            p Username:
+            p(class = "user") Username:
                 br
                 input(type="text" name='username')
-            p Password:
+            p(class = "pass") Password:
                 br
                 input(type="text" name='password')
-            p
+            p(class = "submit")
                 input(type="submit" value='Log In')

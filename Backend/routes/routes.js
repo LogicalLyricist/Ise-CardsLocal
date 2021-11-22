@@ -27,3 +27,10 @@ exports.store = (req,res) => {
         title:`Ise-Cards`
     });
 };
+
+exports.login = (req,res) => {
+    
+    res.render("Login", {
+        title:`Ise-Cards`
+    });
+};
