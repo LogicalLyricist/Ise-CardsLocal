@@ -11,5 +11,7 @@ app.use(express.static(path.join(__dirname,"/public")));
 
 app.get("/", routes.index);
 app.get("/home", routes.index);
+app.get("/game", routes.game);
+app.get("/store", routes.store);
 
 app.listen(3000);

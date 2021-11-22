@@ -13,3 +13,17 @@ exports.index = (req,res) => {
         title:`Ise-Cards`
     });
 };
+
+exports.game = (req,res) => {
+    
+    res.render("game", {
+        title:`Ise-Cards`
+    });
+};
+
+exports.store = (req,res) => {
+    
+    res.render("store", {
+        title:`Ise-Cards`
+    });
+};

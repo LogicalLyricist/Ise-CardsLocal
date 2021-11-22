@@ -1,14 +1,13 @@
 doctype 
 html 
     head 
-        link(href='public/style.css' rel ='stylesheet')
+        link(href='style.css' rel='stylesheet')
         title Ise-Cards
-        ul 
-            li 
-                a(href="http://") Main
-            li
-                a(href="http://") Play
-            li
-                a(href="http://") Store 
+        div(id='menu')
+            a(href="/" class='menuItem') Main
+            a(href="/game" class='menuItem') Play
+            a(href="/store" class='menuItem') Store 
+            div(id='spacingForMenu' class='menuItem')
+            a(href='about:blank' class='menuItem') Log in / Sign up
     body 
     block content
