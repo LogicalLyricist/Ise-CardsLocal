@@ -13,5 +13,6 @@ app.get("/", routes.index);
 app.get("/home", routes.index);
 app.get("/game", routes.game);
 app.get("/store", routes.store);
+app.get("/Login", routes.login)
 
 app.listen(3000);

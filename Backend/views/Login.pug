@@ -1,8 +1,9 @@
 doctype 
-html 
+html(id = 'login')
     head 
+    link(href='style.css' rel ='stylesheet')
     body 
-        form(method='post' action='/')
+        form(id = 'loginForm' method='post' action='/')
             p(class = "user") Username:
                 br
                 input(type="text" name='username')
