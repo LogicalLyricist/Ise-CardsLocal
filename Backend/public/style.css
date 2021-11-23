@@ -8,13 +8,6 @@
     background-size: cover;
 }
 
-header{
-    left:0px;
-    top:0px;
-    position: fixed;
-    margin: -20px;
-}
-
 .loginForm{
     text-align: center;
     font-size: 30px;
@@ -35,7 +28,6 @@ header{
     height: fit-content;
     padding: 40px;
     font-size: 20px;
-    
 }
 
 .loginForm > .user{
@@ -49,9 +41,9 @@ header{
 
 .menu{
     display: flex;
-    flex-wrap: nowrap;
-    list-style-type: none;
+    flex-direction: row;
     background-color: black;
+    margin: -10px;
 }
 
 .menu > .item {
@@ -60,14 +52,14 @@ header{
     font-size: 20px;
     margin: 10px;
     padding: 20px;
-    
     cursor: pointer;
     user-select: none;
-}
-
-.menu > li > a{
     color: white;
     text-decoration: none;
+}
+
+.menu > #blank {
+    flex: 1;
 }
 
 .storeButton{

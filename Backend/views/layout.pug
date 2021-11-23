@@ -5,15 +5,10 @@ html
         title Ise-Cards
     body(id = 'site')
         header 
-            ul(class='menu') 
-                li(class = 'item')
-                    a(href="http://localhost:3000/") Main
-                li(class = 'item')
-                    a(href="http://localhost:3000/game") Play
-                li(class = 'item')
-                    a(href="http://localhost:3000/store") Store 
-                li(id = 'blank')
-
-                li(class = 'item')
-                    a(href="http://localhost:3000/Login") Login
+            div(class='menu') 
+                a(href="http://localhost:3000/" class='item') Main
+                a(href="http://localhost:3000/game" class='item') Play
+                a(href="http://localhost:3000/store" class='item') Store 
+                div(id='blank')
+                a(href="http://localhost:3000/Login" class='item') Login
     block content
