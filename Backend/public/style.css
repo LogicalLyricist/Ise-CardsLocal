@@ -43,7 +43,7 @@
     display: flex;
     flex-direction: row;
     background-color: black;
-    margin: -10px;
+    margin: -8px;
 }
 
 .menu > .item {
