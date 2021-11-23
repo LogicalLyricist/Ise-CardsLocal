@@ -14,10 +14,12 @@ app.use(express.static(path.join(__dirname,"/public")));
 
 app.get("/", routes.index);
 app.get("/home", routes.index);
+app.post("/", urlencodedParser, routes.indexLoggedIn)
 app.get("/game", routes.game);
 app.get("/store", routes.store);
 app.get("/Login", routes.login);
 app.post("/Login",urlencodedParser, routes.login)
 app.get("/signup", routes.signup);
+app.post("/create",urlencodedParser, routes.create)
 
 app.listen(3000);
