@@ -1,18 +1,19 @@
 doctype 
-html(id = 'site') 
+html 
     head 
         link(href='style.css' rel ='stylesheet')
         title Ise-Cards
-        ul(class='menu') 
-            li(class = 'item')
-                a(href="http://localhost:3000/") Main
-            li(class = 'item')
-                a(href="http://localhost:3000/game") Play
-            li(class = 'item')
-                a(href="http://localhost:3000/store") Store 
-            li(id = 'blank')
+    body(id = 'site')
+        header 
+            ul(class='menu') 
+                li(class = 'item')
+                    a(href="http://localhost:3000/") Main
+                li(class = 'item')
+                    a(href="http://localhost:3000/game") Play
+                li(class = 'item')
+                    a(href="http://localhost:3000/store") Store 
+                li(id = 'blank')
 
-            li(class = 'item')
-                a(href="http://localhost:3000/Login") Login
-    body 
+                li(class = 'item')
+                    a(href="http://localhost:3000/Login") Login
     block content
