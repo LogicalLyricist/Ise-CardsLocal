@@ -1,9 +1,54 @@
-var AWS = require('aws-sdk');
-// Set the region 
-AWS.config.update({region: 'us-east-2'});
+var AWS = require("aws-sdk");
+let awsConfig = {
+    "region": "us-east-2",
+    "endpoint": "http://dynamodb.us-east-2.amazonaws.com",
+    "accessKeyId": "AKIASV7F3JEWG3UECSGF", "secretAccessKey": "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"
+};
+AWS.config.update(awsConfig);
 
-// Create DynamoDB document client
-var docClient = new AWS.DynamoDB.DocumentClient({apiVersion: '2021-11-11'});
+let docClient = new AWS.DynamoDB.DocumentClient();
+const bcrypt = require("bcryptjs");
+const expressSession = require("express-session");
+
+let readOneByName = function (username) {
+    var params = {
+        TableName: "Users",
+        Key: {
+            "username": username
+        }
+    };
+
+    docClient.get(params, function (err, data) {
+        if (err) {
+            console.log("users::readOneByName::error - " + JSON.stringify(err, null, 2));
+        }
+        else {
+            console.log("users::readOneByName::success - " + JSON.stringify(data, null, 2));
+        }
+    })
+}
+
+let addOne = function (username, password) {
+    var input = {
+        "username":username,
+        "password":password,
+        "sweatIndex":0,
+        "ownedCards": 0,
+        "usedCards": 0,
+    };
+    var params = {
+        TableName: "Users",
+        Item:  input
+    };
+    docClient.put(params, function (err, data) {
+
+        if (err) {
+            console.log("users::addOne::error - " + JSON.stringify(err, null, 2));                      
+        } else {
+            console.log("users::addOne::success" );                      
+        }
+    });
+}
 
 exports.index = (req,res) => {
     
@@ -13,19 +58,9 @@ exports.index = (req,res) => {
 };
 
 exports.indexLoggedIn = (req,res) => {
-        var params = {
-        TableName: 'Users',
-        Key: {'Type': req.body.username}
-        };
-        
-        docClient.get(params, function(err, data) {
-            if (err) {
-                console.log("Error", err);
-            } else {
-                console.log("Success", data.Item);
-            }
-        });
-
+    Hash = readOneByName(req.body.username)
+    bcrypt.compareSync(req.body.password, Hash);
+    
     req.session.user = {
         isAuthenticated: true,
         username: req.body.username
@@ -35,8 +70,10 @@ exports.indexLoggedIn = (req,res) => {
     });
 };
 exports.create = (req,res) => {
-    
-    res.render("home", {
+    let salt = bcrypt.genSaltSync(10);
+    let hash = bcrypt.hashSync(req.body.password, salt);
+    addOne(req.body.username, hash);
+    res.render("Login", {
         title:`Ise-Cards`
     });
 };
