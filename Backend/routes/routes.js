@@ -1,13 +1,40 @@
-//const {MongoClient, ObjectId} = require("mongodb");
+var AWS = require('aws-sdk');
+// Set the region 
+AWS.config.update({region: 'us-east-2'});
 
-//const url = "";
-//const client = new MongoClient(url);
-
-//const dbName = "myData";
-//const db = client.db(dbName);
-//const collection = db.collection("People");
+// Create DynamoDB document client
+var docClient = new AWS.DynamoDB.DocumentClient({apiVersion: '2021-11-11'});
 
 exports.index = (req,res) => {
+    
+    res.render("home", {
+        title:`Ise-Cards`
+    });
+};
+
+exports.indexLoggedIn = (req,res) => {
+        var params = {
+        TableName: 'Users',
+        Key: {'Type': req.body.username}
+        };
+        
+        docClient.get(params, function(err, data) {
+            if (err) {
+                console.log("Error", err);
+            } else {
+                console.log("Success", data.Item);
+            }
+        });
+
+    req.session.user = {
+        isAuthenticated: true,
+        username: req.body.username
+    }
+    res.render("home", {
+        title:`Ise-Cards`
+    });
+};
+exports.create = (req,res) => {
     
     res.render("home", {
         title:`Ise-Cards`
