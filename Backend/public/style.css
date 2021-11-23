@@ -21,6 +21,16 @@
     height: 350px;
 }
 
+#gameDescription{
+    background-color: black;
+    color:white;
+    width: fit-content;
+    height: fit-content;
+    padding: 40px;
+    font-size: 20px;
+    
+}
+
 .loginForm > .user{
     padding: 20px;
 }
