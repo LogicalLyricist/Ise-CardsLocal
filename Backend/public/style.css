@@ -3,12 +3,12 @@
     background-size: cover;
 }
 
-#login{
+.login{
     background-image: url("login-background.jpg");
     background-size: cover;
 }
 
-#loginForm{
+.loginForm{
     text-align: center;
     font-size: 30px;
     display: block;
@@ -21,11 +21,11 @@
     height: 350px;
 }
 
-#loginForm > .user{
+.loginForm > .user{
     padding: 20px;
 }
 
-#loginForm > a{
+.loginForm > a{
     color: white;
     text-decoration: none;
 }
