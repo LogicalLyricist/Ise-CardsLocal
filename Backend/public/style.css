@@ -18,11 +18,16 @@
     background-color: black;
     color: white;
     width: 250px;
-    height: 300px;
+    height: 350px;
 }
 
 #loginForm > .user{
     padding: 20px;
+}
+
+#loginForm > a{
+    color: white;
+    text-decoration: none;
 }
 
 .menu{
@@ -32,22 +37,24 @@
     width: 300px;
 }
 
-.menu > li {
+.menu > .item {
+    display: flex;
     text-align: center;
-    border: orange;
-    border-style: solid;
-    border-width: 2px;
     font-size: 20px;
     margin: 10px;
     padding: 20px;
+    background-color: black;
+    cursor: pointer;
+    user-select: none;
 }
 
-.menu > li > a:visited{
-    color: black;
+.menu > #blank{
+
 }
 
-.menu > li > a:active {
-    color: red;
+.menu > li > a{
+    color: white;
+    text-decoration: none;
 }
 
 .storeButton{
@@ -72,6 +79,7 @@
     border-width: 2px;
     width: fit-content;
     padding: 50px;
+    margin: 50px;
     background-image: url("isecard-back.png");
     background-size: cover;
 }

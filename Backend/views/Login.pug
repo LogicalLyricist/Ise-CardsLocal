@@ -1,8 +1,8 @@
 doctype 
-html(id = 'login')
+html
     head 
     link(href='style.css' rel ='stylesheet')
-    body 
+    body(id = 'login')
         form(id = 'loginForm' method='post' action='/')
             p(class = "user") Username:
                 br
@@ -12,3 +12,4 @@ html(id = 'login')
                 input(type="text" name='password')
             p(class = "submit")
                 input(type="submit" value='Log In')
+            a(href="http://localhost:3000/signup") Sign Up? 

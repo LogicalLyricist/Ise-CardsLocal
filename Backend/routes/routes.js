@@ -34,3 +34,10 @@ exports.login = (req,res) => {
         title:`Ise-Cards`
     });
 };
+
+exports.signup = (req,res) => {
+    
+    res.render("signup", {
+        title:`Ise-Cards`
+    });
+};
