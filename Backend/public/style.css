@@ -28,7 +28,6 @@
     height: fit-content;
     padding: 40px;
     font-size: 20px;
-    
 }
 
 .loginForm > .user{
@@ -42,9 +41,9 @@
 
 .menu{
     display: flex;
-    flex-wrap: nowrap;
-    list-style-type: none;
-    width: 300px;
+    flex-direction: row;
+    background-color: black;
+    margin: -8px;
 }
 
 .menu > .item {
@@ -53,14 +52,14 @@
     font-size: 20px;
     margin: 10px;
     padding: 20px;
-    background-color: black;
     cursor: pointer;
     user-select: none;
-}
-
-.menu > li > a{
     color: white;
     text-decoration: none;
+}
+
+.menu > #blank {
+    flex: 1;
 }
 
 .storeButton{
