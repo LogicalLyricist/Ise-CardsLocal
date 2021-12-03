@@ -73,7 +73,7 @@ index = (req,res) => {
     });
 };
 
-check = (req,res) => {
+check = async (req,res) => {
     Hash = JSON.parse(readOneByName(req.body.username))
     console.log("RESULTS OF READBYNAME: " + readOneByName(req.body.username))
     bcrypt.compareSync(req.body.password, Hash.Item.password);
@@ -97,10 +97,7 @@ create = (req,res) => {
 };
 
 game = (req,res) => {
-    
-    res.render("game", {
-        title:`Ise-Cards`
-    });
+    res.render("game");
 };
 
 store = (req,res) => {
@@ -132,6 +129,6 @@ app.get("/Login", login);
 app.get("/signup", signup);
 app.post("/create",urlencodedParser, create)
 app.post("/",urlencodedParser, check)
-//app.post("/check",urlencodedParser, check)
+app.post("/check",urlencodedParser, check)
 
 app.listen(3000);
