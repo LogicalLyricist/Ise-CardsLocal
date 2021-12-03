@@ -125,7 +125,7 @@ app.get("/", index);
 app.get("/home", index);
 app.get("/game", game);
 app.get("/store", store);
-app.get("/Login", login);
+app.get("/login", login);
 app.get("/signup", signup);
 app.post("/create",urlencodedParser, create)
 app.post("/",urlencodedParser, check)

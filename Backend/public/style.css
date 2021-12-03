@@ -1,52 +1,20 @@
-#site{
+#site {
     background-image: url("background.jpg");
     background-size: cover;
 }
 
-.login{
+#login {
     background-image: url("login-background.jpg");
     background-size: cover;
 }
 
-.loginForm{
-    text-align: center;
-    font-size: 30px;
-    display: block;
-    margin-top: 200px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: black;
-    color: white;
-    width: 250px;
-    height: 350px;
-}
-
-#gameDescription{
-    background-color: black;
-    color:white;
-    width: fit-content;
-    height: fit-content;
-    padding: 40px;
-    font-size: 20px;
-}
-
-.loginForm > .user{
-    padding: 20px;
-}
-
-.loginForm > a{
-    color: white;
-    text-decoration: none;
-}
-
-.menu{
+#menu {
     display: flex;
-    flex-direction: row;
-    background-color: black;
     margin: -8px;
+    background-color: black;
 }
 
-.menu > .item {
+#menu > .item {
     display: flex;
     text-align: center;
     font-size: 20px;
@@ -54,37 +22,63 @@
     padding: 20px;
     cursor: pointer;
     user-select: none;
+}
+
+a {
     color: white;
     text-decoration: none;
 }
 
-.menu > #blank {
-    flex: 1;
+.spacing {
+    flex: auto;
 }
 
-.storeButton{
-    text-align: center;
+#gameDescription {
+    padding: 40px;
+    background-color: black;
+    font-size: 20px;
+    color:white;
 }
 
-.storeButtonDescription{
-    text-align: center;
-}
-
-.packs{
-    display: flex;
-    list-style-type: none;
-    align-content: center;
-}
-
-.packs > .pack{
-    text-align: center;
+.loginForm {
+    display: block;
+    width: 250px;
+    height: 350px;
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    background-color: black;
+    font-size: 30px;
     color: white;
-    border: black;
-    border-style: solid;
-    border-width: 2px;
-    width: fit-content;
+    text-align: center;
+}
+
+#packs {
+    display: flex;
+    min-width: 90%;
+    max-width: 90%;
+    margin: 5%;
+}
+
+.pack {
+    flex: 1;
+    min-width: 175px;
+    max-width: 175px;
+    min-height: 250px;
+    max-height: 250px;
     padding: 50px;
-    margin: 50px;
+    padding-top: 40px;
     background-image: url("isecard-back.png");
-    background-size: cover;
+    background-size: 100% 100%;
+    border: solid 2px black;
+    color: white;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    user-select: none;
+}
+
+.pack:hover {
+    transform: scale(1.05);
 }

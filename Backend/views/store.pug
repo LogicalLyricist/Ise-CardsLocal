@@ -1,51 +1,35 @@
 extends layout 
 
 block content 
-    div(id='storeContainer')
-        div(id='storeUpperSection')
-        ul(class = 'packs')
-            li(class = 'pack')
-                div(class='storeButton')
-                    div
-                        h3 Single Pack
-                        p 5 cards <br> $10.00
-                div(class='storeButtonDescription')
-                    hr
-                    p <i>Legendary:</i> 1% chance
-                    p <i>Rare:</i> 9% chance
-                    p <i>Common:</i> 90% chance
-
-            li(class = 'pack')
-                div(class='storeButton')
-                    div
-                        h3 Double Pack
-                        p 10 cards <br> $15.00
-                    div(class='storeButtonDescription')
-                        hr
-                        p <i>Legendary:</i> 1% chance
-                        p <i>Rare:</i> 9% chance
-                        p <i>Common:</i> 90% chance
-
-            li(class = 'pack')
-                div(class='storeButton')
-                    div
-                        h3 Triple Pack
-                        p 15 cards <br> $20.00
-                    div(class='storeButtonDescription')
-                        hr
-                        p <i>Legendary:</i> 1% chance
-                        p <i>Rare:</i> 9% chance
-                        p <i>Common:</i> 90% chance
-
-            li(class = 'pack')
-                div(class='storeButton')
-                    div
-                        h3 Legendary Pack
-                        p 5 cards <br> $25.00
-                    div(class='storeButtonDescription')
-                        hr
-                        p <i>Legendary:</i> 7% chance
-                        p <i>Rare:</i> 33% chance
-                        p <i>Common:</i> 60% chance
-    div(id='storeLowerSection')
-        p Text goes here maybe...
+    div(id='packs')
+        div(class='pack')
+            h3 Single Pack
+            p 5 cards <br> $10.00
+            br
+            p <i>Legendary:</i> 1% chance
+            p <i>Rare:</i> 9% chance
+            p <i>Common:</i> 90% chance
+        div(class='spacing')
+        div(class='pack')
+            h3 Double Pack
+            p 10 cards <br> $15.00
+            br
+            p <i>Legendary:</i> 1% chance
+            p <i>Rare:</i> 9% chance
+            p <i>Common:</i> 90% chance
+        div(class='spacing')
+        div(class='pack')
+            h3 Triple Pack
+            p 15 cards <br> $20.00
+            br
+            p <i>Legendary:</i> 1% chance
+            p <i>Rare:</i> 9% chance
+            p <i>Common:</i> 90% chance
+        div(class='spacing')
+        div(class='pack')
+            h3 Legendary Pack
+            p 5 cards <br> $25.00
+            br
+            p <i>Legendary:</i> 7% chance
+            p <i>Rare:</i> 33% chance
+            p <i>Common:</i> 60% chance
